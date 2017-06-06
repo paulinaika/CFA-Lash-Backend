@@ -14,6 +14,8 @@
        Price: <input type="text" name="price"><br>
        Quantity: <input type="text" name="quantity"><br>
        Description: <input type="text" name="description"><br>
+       Image: <input type="text" name="image"><br>
+
        <input type="submit">
     </form>
 
@@ -23,7 +25,8 @@
         <%= lash.category %></br>
         <%= lash.price %> </br>
         <%= lash.quantity %> </br>
-        <%= lash.description %> </li>
+        <%= lash.description %> </br>
+        <%= lash.image %> </li>
          <a href="/<%= lash._id %>/edit">Edit</a> | <form action="/<%= lash._id %>/delete" method="post">
             <input type="submit" value="delete">
          </form>

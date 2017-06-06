@@ -25,6 +25,10 @@ const lashSchema = new Schema({
     type: String,
     trim: true // name="    Sugar " - the white spaces will be trimmed!
   },
+	image: {
+		type: String,
+		trim: true // name="    Sugar " - the white spaces will be trimmed!
+	},
 	created_at: {
 		type: Date,
 		default: Date.now

@@ -24,6 +24,7 @@ exports.createLash = (req, res) => {
   const price = req.body.price;
   const quantity = req.body.quantity;
   const description = req.body.description;
+  const image = req.body.image;
 
 
   let lash = new Lash ();
@@ -32,6 +33,7 @@ exports.createLash = (req, res) => {
   lash.price = price;
   lash.quantity = quantity;
   lash.description = description;
+  lash.image = image;
 
   lash.save()
     .then(() => {
@@ -46,6 +48,7 @@ exports.createLashApi = (req, res) => {
   const price = req.query.price;
   const quantity = req.query.quantity;
   const description = req.query.description;
+  const image = req.query.image;
 
   let lash = new Lash ();
   lash.name = name;
@@ -53,6 +56,7 @@ exports.createLashApi = (req, res) => {
   lash.price = price;
   lash.quantity = quantity;
   lash.description = description;
+  lash.image = image;
 
   lash.save()
     .then(() => {
