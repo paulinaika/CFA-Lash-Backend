@@ -7,5 +7,28 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+
+    <form action="/" method="post">
+       Name: <input type="text" name="name"><br>
+       Category: <input type="text" name="category"><br>
+       Price: <input type="text" name="price"><br>
+       Quantity: <input type="text" name="quantity"><br>
+       Description: <input type="text" name="description"><br>
+       <input type="submit">
+    </form>
+
+    <ul>
+      <% alllashes.forEach(lash => { %>
+        <li><%= lash.name %> </br>
+        <%= lash.category %></br>
+        <%= lash.price %> </br>
+        <%= lash.quantity %> </br>
+        <%= lash.description %> </li>
+         <a href="/<%= lash._id %>/edit">Edit</a> | <form action="/<%= lash._id %>/delete" method="post">
+            <input type="submit" value="delete">
+         </form>
+      <% }) %>
+    </ul>
+
   </body>
 </html>

@@ -7,8 +7,40 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+const authApi = require('./middleware/authApi');
 
 var app = express();
+
+var jwt = require('jsonwebtoken');
+// Secretcode is a hash/salt. Encrypts it!
+// JWT.Sign takes in two attributes - emails and password
+var token = jwt.sign( {email: 'paulina@gmail.com'}, 'secretcode');
+console.log(token)
+
+var mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost/lash');
+const { connection:db } = mongoose;
+
+// database is called music_station
+// mongoose.connect(process.env.MONGOLAB_MS);
+// mongoose.connect('mongodb://localhost/musicStation');
+// if (process.env.MONGODB_MS) {
+ // mongoose.connect('mongodb://<user>:<password>@ds151279.mlab.com:51279/musicstation');
+ // const { connection: db } = mongoose;
+
+//     // mongoose.connect(process.env.MONGODB_URI);
+// } else {
+//  mongoose.connect('mongodb://<user>:<password>@ds151279.mlab.com:51279/musicstation');
+
+    // mongoose.connect('mongodb://localhost/fitMe')
+// }
+
+
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', () => {
+  console.log('connected to Lash database');
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -21,6 +53,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/api*', authApi);
+app.use('/', index);
+app.use('/users', users);
 
 app.use('/', index);
 app.use('/users', users);
