@@ -15,7 +15,8 @@ const lashSchema = new Schema({
   },
   price: {
     type: Number,
-    trim: true // name="    Sugar " - the white spaces will be trimmed!
+    trim: true, // name="    Sugar " - the white spaces will be trimmed!
+		min: 0,
   },
 	quantity: {
     type: Number,

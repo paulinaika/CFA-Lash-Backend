@@ -21,15 +21,16 @@
 
     <ul>
       <% alllashes.forEach(lash => { %>
-        <li><%= lash.name %> </br>
-        <%= lash.category %></br>
-        <%= lash.price %> </br>
-        <%= lash.quantity %> </br>
-        <%= lash.description %> </br>
-        <%= lash.image %> </li>
-         <a href="/<%= lash._id %>/edit">Edit</a> | <form action="/<%= lash._id %>/delete" method="post">
-            <input type="submit" value="delete">
-         </form>
+        <li>Name: <%= lash.name %> </br>
+        Category: <%= lash.category %></br>
+        Cost Price: <%= lash.price %> </br>
+        Quantity: <%= lash.quantity %> </br>
+        Description: <%= lash.description %> </br>
+        Image Url: <%= lash.image %> </li>
+         <a href="/<%= lash._id %>/edit">Edit</a>
+        <form action="/<%= lash._id %>/delete" method="post">
+          <input type="submit" value="delete">
+        </form>
       <% }) %>
     </ul>
 
