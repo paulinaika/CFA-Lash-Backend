@@ -19,22 +19,12 @@ console.log(token)
 
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/lash');
+// mongoose.connect('mongodb://localhost/lash');
+// const { connection:db } = mongoose;
+
+mongoose.connect(process.env.LASH_DB);
 const { connection:db } = mongoose;
 
-// database is called music_station
-// mongoose.connect(process.env.MONGOLAB_MS);
-// mongoose.connect('mongodb://localhost/musicStation');
-// if (process.env.MONGODB_MS) {
- // mongoose.connect('mongodb://<user>:<password>@ds151279.mlab.com:51279/musicstation');
- // const { connection: db } = mongoose;
-
-//     // mongoose.connect(process.env.MONGODB_URI);
-// } else {
-//  mongoose.connect('mongodb://<user>:<password>@ds151279.mlab.com:51279/musicstation');
-
-    // mongoose.connect('mongodb://localhost/fitMe')
-// }
 
 
 db.on('error', console.error.bind(console, 'connection error:'));
