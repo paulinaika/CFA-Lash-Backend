@@ -37,6 +37,6 @@ router.delete('/api/:id/delete', LashController.deleteLashApi);
 
 // Update Quantity API
 
-router.post('api/:id/transaction'), LashController.newQuantityApi);
+router.post('api/:id/transaction', LashController.newQuantityApi);
 
 module.exports = router;
