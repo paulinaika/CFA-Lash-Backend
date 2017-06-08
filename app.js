@@ -4,12 +4,15 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var cors = require('cors')
 
 var index = require('./routes/index');
 var users = require('./routes/users');
 const authApi = require('./middleware/authApi');
 
 var app = express();
+
+app.use(cors())
 
 var jwt = require('jsonwebtoken');
 // Secretcode is a hash/salt. Encrypts it!
