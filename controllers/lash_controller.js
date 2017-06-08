@@ -110,3 +110,15 @@ exports.deleteLashApi = (req,res) => {
       res.redirect('/api');
     });
 };
+
+// Update Quantity
+
+exports.newQuantityApi = (req, res) => {
+  Lash.findOneAndUpdate({ _id: req.params.id}, req.body.quantity, {
+    new: true
+  })
+    .then((lash) => {
+      // res.redirect(`/api/${req.params.id}`);
+      res.json(lash)
+    });
+};

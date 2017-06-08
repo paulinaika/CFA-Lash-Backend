@@ -15,7 +15,7 @@ const lashSchema = new Schema({
     type: Number,
     trim: true,
 		default: 0,
-		min: [0, "Cost cannot be negative"]
+		// min: [0, "Cost cannot be negative"]
   },
 	quantity: {
     type: Number,
