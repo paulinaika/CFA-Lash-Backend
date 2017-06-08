@@ -5,7 +5,6 @@ const authApi = (req, res, next) => {
 
   console.log("authenticating api request")
 
-// Query is a Postman thing
   const key = req.body.key || req.query.key || req.headers['x-access-token'];
 
   var decoded = jwt.verify(key, 'secretcode');

@@ -1,34 +1,32 @@
 const mongoose = require('mongoose');
-// destructuring
 const { Schema } = mongoose;
 
-// database is called music
 
 const lashSchema = new Schema({
 	name: {
 		type: String,
-		trim: true // name="    Sugar " - the white spaces will be trimmed!
+		trim: true
 	},
   category: {
     type: String,
-    trim: true // name="    Sugar " - the white spaces will be trimmed!
+    trim: true
   },
   price: {
     type: Number,
-    trim: true, // name="    Sugar " - the white spaces will be trimmed!
+    trim: true,
 		min: 0,
   },
 	quantity: {
     type: Number,
-    trim: true // name="    Sugar " - the white spaces will be trimmed!
+    trim: true
   },
 	description: {
     type: String,
-    trim: true // name="    Sugar " - the white spaces will be trimmed!
+    trim: true
   },
 	image: {
 		type: String,
-		trim: true // name="    Sugar " - the white spaces will be trimmed!
+		trim: true
 	},
 	created_at: {
 		type: Date,

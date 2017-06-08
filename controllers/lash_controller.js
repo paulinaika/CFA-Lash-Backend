@@ -12,7 +12,6 @@ exports.getLash = (req, res) => {
 exports.getLashApi = (req, res) => {
   Lash.find()
     .then((alllashes) => {
-      // index refers to the to the file name index in the views folder
       res.json(alllashes)
     });
 };
@@ -74,8 +73,6 @@ exports.getEdit = (req, res) => {
 };
 
 exports.getSingleLashApi = (req, res) => {
-  // edit refers to the file name edit in the views folder
-  // Make sure that you start the model/class with a capital letter mate!
   Lash.findOne({_id: req.params.id})
     .then(lash => {
         res.json(lash)
@@ -83,8 +80,6 @@ exports.getSingleLashApi = (req, res) => {
 };
 
 exports.updateLash = (req, res) => {
-  // edit refers to the file name edit in the views folder
-  // findOneAndUpdate needs three arguements to be passed through! Id, body and this new shit (READ ME - read the docs)
   Lash.findOneAndUpdate({ _id: req.params.id}, req.body, {
     new: true
   })
@@ -94,8 +89,6 @@ exports.updateLash = (req, res) => {
 };
 
 exports.updateLashApi = (req, res) => {
-  // edit refers to the file name edit in the views folder
-  // findOneAndUpdate needs three arguements to be passed through! Id, body and this new shit (READ ME - read the docs)
   Lash.findOneAndUpdate({ _id: req.params.id}, req.query, {
     new: true
   })
