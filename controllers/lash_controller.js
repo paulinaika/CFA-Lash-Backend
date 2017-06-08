@@ -114,7 +114,7 @@ exports.deleteLashApi = (req,res) => {
 // Update Quantity
 
 exports.newQuantityApi = (req, res) => {
-  Lash.findOneAndUpdate({ _id: req.params.id}, req.body.quantity, {
+  Lash.findOneAndUpdate({ _id: req.params.id}, { $set: { "quantity" : req.body.quantity }, {
     new: true
   })
     .then((lash) => {
