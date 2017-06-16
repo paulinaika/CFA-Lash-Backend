@@ -43,6 +43,8 @@ Meeting minutes of client interactions:
 
 I have brainstormed the idea and possible problems of this project through [Trello board](https://trello.com/b/doxRnjYV/inventory-management). I then proceeded to identify the core functions of our Minimum Viable Product (MVP) and also to identify the possible future functions to be added to my application.
 
+![alt tag](http://res.cloudinary.com/dcbeoroxh/image/upload/v1496963631/Lashes/Screen_Shot_2017-06-09_at_6.39.15_am.png)
+
 
 # Design Decisions
 
