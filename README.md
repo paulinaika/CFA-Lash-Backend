@@ -1,8 +1,10 @@
 # CFA Project 3
 
 This project is split into two parts:
-* [Front-End](https://github.com/paulinaika/CFA-Lash-Frontend)
-* [Back-End](https://github.com/paulinaika/CFA-Lash-Backend)
+- [Front-End](https://github.com/paulinaika/CFA-Lash-Frontend)
+    - Live app: [Lashes-Frontend](https://salty-scrubland-82889.herokuapp.com/)
+- [Back-End](https://github.com/paulinaika/CFA-Lash-Backend)
+    - Live app: [Lashes-Backend](https://fave-lash.herokuapp.com/)
 
 
 # Content
