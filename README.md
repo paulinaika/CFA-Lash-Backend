@@ -62,7 +62,7 @@ I have brainstormed the idea and possible problems of this project through [Trel
 </p>
 
 # Future Implementations
-As this is a work in progress project, I would like to implement the following for furture improvements:
+As this is a work in progress project, I would like to implement the following for future improvements:
 1. To build a customer and transaction database.
 2. To be able to list out the most purchased products so that my client would be able to study the preferred types of lashes purchased.
 3. To be able to list out the past purchases of each customers in order to give personalised service to their customers.
